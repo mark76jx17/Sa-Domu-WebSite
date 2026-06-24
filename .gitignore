@@ -1,0 +1,12 @@
+# Backup foto originali ad alta risoluzione (non necessarie al sito)
+_originali/
+
+# Cartelle editor / strumenti
+.claude/
+.vscode/
+.idea/
+
+# File temporanei / sistema operativo
+*.zip
+Thumbs.db
+.DS_Store

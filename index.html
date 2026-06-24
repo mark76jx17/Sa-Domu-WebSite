@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sa Domu Sarda · Ristorante tipico sardo a Cagliari</title>
+<meta name="description" content="Sa Domu Sarda — cucina sarda di terra nel cuore di Cagliari. Culurgiones fatti a mano, taglieri, carni e dolci della tradizione. Selezione Michelin · Travellers' Choice.">
+<link rel="icon" type="image/png" href="assets/img/logo-dark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="brand" onclick="show('home')">
+      <img class="brand-mark" src="assets/img/logo-dark.png" alt="Logo Sa Domu Sarda">
+      <span class="brand-word">Sa Domu Sarda</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-links">
+        <button class="nav-link active" data-tab="home" onclick="show('home')" data-i18n="nav_home">Home</button>
+        <button class="nav-link" data-tab="menu" onclick="show('menu')" data-i18n="nav_menu">Menu</button>
+        <button class="nav-link" data-tab="gallery" onclick="show('gallery')" data-i18n="nav_gallery">Galleria</button>
+        <button class="nav-link" data-tab="reviews" onclick="show('reviews')" data-i18n="nav_reviews">Recensioni</button>
+        <button class="nav-link" data-tab="about" onclick="show('about')" data-i18n="nav_about">Chi siamo</button>
+        <button class="nav-link" data-tab="contact" onclick="show('contact')" data-i18n="nav_contact">Contatti</button>
+      </div>
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Lingua">
+          <button class="lang-btn active" data-lang="it" onclick="setLang('it')">IT</button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+          <button class="lang-btn" data-lang="de" onclick="setLang('de')">DE</button>
+          <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+        </div>
+        <button class="btn btn-primary btn-book" onclick="openBook()" data-i18n="nav_book">Prenota</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="tab active">
+  <div class="hero">
+    <div class="hero-bg" style="background-image:url('assets/img/filetto.jpg')"></div>
+    <div class="hero-content">
+      <p class="kicker" data-i18n="hero_kicker">Trattoria · Cucina sarda di terra</p>
+      <h1 class="hero-title">Sa Domu Sarda</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Nel cuore di Cagliari, i sapori autentici della Sardegna — pasta fatta a mano ogni mattina.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="openBook()" data-i18n="cta_book">Prenota un tavolo</button>
+        <button class="btn btn-light" onclick="show('menu')" data-i18n="cta_menu">Scopri il menu</button>
+      </div>
+      <div class="hero-badges">
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.1L21 9l-4.7 4.3L17.6 20 12 16.6 6.4 20l1.3-6.7L3 9l6.1-.9z"/></svg><span data-i18n="badge_tc">Travellers' Choice 2025</span></span>
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.1L21 9l-4.7 4.3L17.6 20 12 16.6 6.4 20l1.3-6.7L3 9l6.1-.9z"/></svg><span data-i18n="badge_michelin">Selezione Michelin</span></span>
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.1L21 9l-4.7 4.3L17.6 20 12 16.6 6.4 20l1.3-6.7L3 9l6.1-.9z"/></svg><span data-i18n="badge_best">N°1 a Cagliari</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-pad">
+    <div class="wrap">
+      <div class="pillars">
+        <div class="pillar">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+          <h3 data-i18n="pillar1_t">Tradizione di terra</h3>
+          <p data-i18n="pillar1_d">La cucina sarda più autentica, fatta di carni, formaggi e pane carasau.</p>
+        </div>
+        <div class="pillar">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5c-2 2-2 5 0 7M7 19h10"/><circle cx="12" cy="4" r="1"/></svg>
+          <h3 data-i18n="pillar2_t">Fatto a mano ogni giorno</h3>
+          <p data-i18n="pillar2_d">I culurgiones e la pasta fresca nascono in cucina ogni mattina.</p>
+        </div>
+        <div class="pillar">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M6 4h12v4a6 6 0 01-12 0zM6 6H4a2 2 0 002 4M18 6h2a2 2 0 01-2 4"/></svg>
+          <h3 data-i18n="pillar3_t">Riconosciuti dalla critica</h3>
+          <p data-i18n="pillar3_d">Selezione Michelin e Travellers' Choice, primo ristorante a Cagliari.</p>
+        </div>
+      </div>
+
+      <div class="ribbon">
+        <div class="ornament"><span>✦</span></div>
+        <p class="kicker" data-i18n="ratings_label" style="color:var(--ink-soft)">La voce di chi ci ha provato</p>
+        <div class="chips">
+          <span class="chip"><b>4,6</b><span class="stars">★★★★★</span><span class="src">Google</span></span>
+          <span class="chip"><b>4,5</b><span class="stars">★★★★★</span><span class="src">Tripadvisor</span></span>
+          <span class="chip"><b>8,6</b><span class="stars">★★★★★</span><span class="src">Foursquare</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="tab">
+  <div class="section-pad">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker" data-i18n="hero_kicker">Trattoria · Cucina sarda di terra</p>
+        <h2 data-i18n="menu_title">Il Menu</h2>
+        <div class="ornament"><span>✦</span></div>
+        <p class="lead" data-i18n="menu_sub">Una selezione delle nostre specialità sarde</p>
+      </div>
+
+      <div class="dish-grid">
+        <div class="dish-card"><img src="assets/img/taglieri.jpg" alt="Tagliere di salumi e formaggi sardi" loading="lazy"><span class="cap">Tagliere di Sardegna</span></div>
+        <div class="dish-card"><img src="assets/img/filetto.jpg" alt="Filetto in salsa alle erbe" loading="lazy"><span class="cap">Filetto in salsa</span></div>
+        <div class="dish-card"><img src="assets/img/tagliata.jpg" alt="Tagliata di manzo su pane carasau" loading="lazy"><span class="cap">Tagliata di manzo</span></div>
+        <div class="dish-card"><img src="assets/img/stufato.jpg" alt="Stufato della tradizione" loading="lazy"><span class="cap">Stufato della casa</span></div>
+      </div>
+
+      <div class="menu-cols">
+        <div>
+          <div class="menu-cat">
+            <h3 data-i18n="cat_antipasti">Antipasti</h3>
+            <div class="menu-item"><div class="name">Tagliere di salumi e formaggi sardi</div><div class="desc" data-i18n="m_taglieri_d">Pecorini di diverse stagionature, salumi del territorio, miele e pane carasau</div></div>
+            <div class="menu-item"><div class="name">Finocchi e pecorino</div><div class="desc" data-i18n="m_finocchi_d">Finocchi croccanti e scaglie di pecorino, un classico sardo</div></div>
+            <div class="menu-item"><div class="name">Favata</div><div class="desc" data-i18n="m_favata_d">Zuppa di fave, verdure e maiale della tradizione contadina</div></div>
+          </div>
+          <div class="menu-cat">
+            <h3 data-i18n="cat_primi">Primi</h3>
+            <div class="menu-item"><div class="name">Culurgiones <span class="tag" data-i18n="tag_specialty">specialità</span></div><div class="desc" data-i18n="m_culurgiones_d">Ravioli sardi chiusi a mano ogni mattina, al pomodoro o con noci e pinoli</div></div>
+            <div class="menu-item"><div class="name">Malloreddus alla campidanese</div><div class="desc" data-i18n="m_malloreddus_d">Gnocchetti sardi con sugo di salsiccia e zafferano</div></div>
+            <div class="menu-item"><div class="name">Ravioli alla ricotta</div><div class="desc" data-i18n="m_ravioli_d">Pasta fresca ripiena di ricotta, burro e salvia</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="menu-cat">
+            <h3 data-i18n="cat_secondi">Secondi</h3>
+            <div class="menu-item"><div class="name">Filetto in salsa alle erbe</div><div class="desc" data-i18n="m_filetto_d">Filetto avvolto e rosolato, con salsa alle erbe aromatiche</div></div>
+            <div class="menu-item"><div class="name">Tagliata di manzo</div><div class="desc" data-i18n="m_tagliata_d">Su pane carasau, rucola e scaglie di pecorino</div></div>
+            <div class="menu-item"><div class="name">Stufato di capra</div><div class="desc" data-i18n="m_stufato_d">Bocconcini di carne brasati lentamente con pomodoro secco</div></div>
+            <div class="menu-item"><div class="name">Cordula con piselli</div><div class="desc" data-i18n="m_cordula_d">Piatto tradizionale sardo con piselli, cotto al sugo</div></div>
+          </div>
+          <div class="menu-cat">
+            <h3 data-i18n="cat_dolci">Dolci</h3>
+            <div class="menu-item"><div class="name">Seadas con miele <span class="tag" data-i18n="tag_specialty">specialità</span></div><div class="desc" data-i18n="m_seadas_d">Dolce fritto ripieno di formaggio, con un velo di miele amaro</div></div>
+            <div class="menu-item"><div class="name">Cheesecake</div><div class="desc" data-i18n="m_cheesecake_d">Cremosa, con coulis di frutta di stagione</div></div>
+            <div class="menu-item"><div class="name">Panna cotta</div><div class="desc" data-i18n="m_pannacotta_d">Classica, con caramello o frutti di bosco</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-foot">
+        <p class="wine-note" data-i18n="wine_note">Carta dei vini sardi: Cannonau, Vermentino, Nuragus — e il nostro mirto.</p>
+        <p><span class="menu-note" data-i18n="menu_note">Disponibili opzioni vegetariane e senza glutine · Fascia di prezzo €20–40 a persona</span></p>
+        <p style="margin-top:22px"><button class="btn btn-primary" onclick="openBook()" data-i18n="cta_book">Prenota un tavolo</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="tab">
+  <div class="section-pad alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker" data-i18n="gallery_sub">Uno sguardo ai nostri piatti</p>
+        <h2 data-i18n="gallery_title">Galleria</h2>
+        <div class="ornament"><span>✦</span></div>
+      </div>
+      <div class="gallery-grid">
+        <figure onclick="openLightbox('assets/img/filetto.jpg')"><img src="assets/img/filetto.jpg" alt="Filetto in salsa" loading="lazy"></figure>
+        <figure onclick="openLightbox('assets/img/stufato.jpg')"><img src="assets/img/stufato.jpg" alt="Stufato di carne" loading="lazy"></figure>
+        <figure onclick="openLightbox('assets/img/tagliata.jpg')"><img src="assets/img/tagliata.jpg" alt="Tagliata di manzo" loading="lazy"></figure>
+        <figure onclick="openLightbox('assets/img/taglieri.jpg')"><img src="assets/img/taglieri.jpg" alt="Tagliere di formaggi sardi" loading="lazy"></figure>
+      </div>
+      <p class="gallery-hint" data-i18n="gallery_hint">Tocca un'immagine per ingrandirla</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="tab">
+  <div class="section-pad">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker" data-i18n="reviews_sub">Quello che dicono i nostri ospiti</p>
+        <h2 data-i18n="reviews_title">Recensioni & Riconoscimenti</h2>
+        <div class="ornament"><span>✦</span></div>
+      </div>
+
+      <div class="awards">
+        <div class="award">
+          <svg class="medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
+          <b data-i18n="badge_tc">Travellers' Choice 2025</b>
+          <span>Tripadvisor</span>
+        </div>
+        <div class="award">
+          <svg class="medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
+          <b data-i18n="badge_michelin">Selezione Michelin</b>
+          <span data-i18n="michelin_source">Guida Michelin</span>
+        </div>
+        <div class="award">
+          <svg class="medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
+          <b data-i18n="badge_best">N°1 a Cagliari</b>
+          <span>Restaurant Guru</span>
+        </div>
+      </div>
+
+      <div class="rate-strip">
+        <span class="chip"><b>4,6</b><span class="stars">★★★★★</span><span class="src">Google · 4.527</span></span>
+        <span class="chip"><b>4,5</b><span class="stars">★★★★★</span><span class="src">Tripadvisor · 3.286</span></span>
+        <span class="chip"><b>8,6</b><span class="stars">★★★★★</span><span class="src">Foursquare</span></span>
+      </div>
+
+      <div class="review-grid">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>« Servizio ottimo e cibo ancora di più, soprattutto i culurgiones, fatti la mattina stessa. Personale simpatico e disponibile, arredamento bellissimo. Si paga il giusto, ma ne vale la pena. »</p>
+          <div class="who"><div class="av">M</div><div><div class="nm">Marco Alberico</div><div class="meta">Google · ★★★★★</div></div></div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>« Eccellente ristorante tipico sardo. Piatti ben curati, servizio veloce, personale professionale e gentile. Cibo ottimo. »</p>
+          <div class="who"><div class="av">E</div><div><div class="nm">Enrica Argentiero</div><div class="meta">Google · ★★★★★</div></div></div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★☆</div>
+          <p>« Atmosfera calda e familiare e una cucina che celebra i sapori della tradizione sarda. Piatti genuini, ingredienti semplici ma di qualità. L'indirizzo perfetto per una cena tipica. »</p>
+          <div class="who"><div class="av">G</div><div><div class="nm">Giacomo Fiorini</div><div class="meta">Google · ★★★★☆</div></div></div>
+        </div>
+      </div>
+
+      <div class="michelin-quote">
+        <div class="ornament"><span>✦</span></div>
+        <p data-i18n="michelin_quote">« Benché isolana, la cucina sarda tradizionale è in prevalenza di terra: qui ne troverete alcuni dei più significativi esempi. »</p>
+        <cite data-i18n="michelin_source">Guida Michelin</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="tab">
+  <div class="section-pad alt">
+    <div class="wrap">
+      <div class="about-wrap">
+        <div class="about-text">
+          <p class="kicker" data-i18n="about_kicker">Sa Domu Sarda — la casa sarda</p>
+          <h2 data-i18n="about_title">Chi siamo</h2>
+          <div class="ornament" style="justify-content:flex-start"><span style="margin-left:0">✦</span></div>
+          <p data-i18n="about_p1">« Sa Domu Sarda » significa « la casa sarda »: un invito a entrare in una casa di Cagliari dove la tradizione di terra dell'isola è di casa. Sotto volte in mattoni, in un ambiente caldo e familiare, portiamo in tavola i piatti che raccontano la Sardegna.</p>
+          <p data-i18n="about_p2">La pasta fatta a mano ogni mattina, i formaggi e i salumi del territorio, le carni cotte con pazienza: una cucina semplice ma curata, riconosciuta dalla Selezione Michelin e amata da chi cerca i sapori autentici dell'isola.</p>
+          <p style="margin-top:24px"><button class="btn btn-ghost" onclick="show('menu')" data-i18n="cta_menu">Scopri il menu</button></p>
+        </div>
+        <div class="about-media">
+          <div class="frame"><img src="assets/img/taglieri.jpg" alt="Tagliere di formaggi e salumi sardi" loading="lazy"></div>
+          <div class="about-seal"><img src="assets/img/logo-light.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="tab">
+  <div class="section-pad">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker" data-i18n="contact_sub">Vi aspettiamo nel cuore di Cagliari</p>
+        <h2 data-i18n="contact_title">Dove siamo & Contatti</h2>
+        <div class="ornament"><span>✦</span></div>
+      </div>
+      <div class="contact-wrap">
+        <div class="info-card">
+          <div class="info-row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><div class="lbl" data-i18n="label_address">Indirizzo</div><div class="val">Via Sassari, 51<br>09124 Cagliari (CA)</div></div>
+          </div>
+          <div class="info-row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+            <div><div class="lbl" data-i18n="label_phone">Telefono</div><a class="val" href="tel:+39070653400">+39 070 653400</a></div>
+          </div>
+          <div class="info-row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><div class="lbl" data-i18n="label_hours">Orari</div><div class="val"><span data-i18n="hours_days">Tutti i giorni</span><br>12:30–15:30 · 19:30–23:00</div></div>
+          </div>
+          <div class="info-row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7L9 18l-5-5"/></svg>
+            <div style="width:100%"><div class="lbl" data-i18n="label_features">Servizi</div>
+              <div class="features">
+                <span class="feature" data-i18n="feat_reservation">Prenotazione consigliata</span>
+                <span class="feature" data-i18n="feat_cards">Carte di credito</span>
+                <span class="feature">Wi-Fi</span>
+                <span class="feature" data-i18n="feat_access">Accessibile in sedia a rotelle</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+39070653400" data-i18n="btn_call">Chiama ora</a>
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/qagX7BM5ixHfqhiZA" target="_blank" rel="noopener" data-i18n="btn_directions">Come raggiungerci</a>
+          </div>
+        </div>
+        <div class="map-card">
+          <iframe title="Mappa Sa Domu Sarda — Via Sassari 51, Cagliari" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=9.1046529%2C39.2129581%2C9.1166529%2C39.2209581&layer=mapnik&marker=39.2169581%2C9.1106529"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/logo-light.png" alt="Sa Domu Sarda">
+          <span class="w">Sa Domu Sarda</span>
+        </div>
+        <p data-i18n="footer_tagline">Cucina sarda di terra nel cuore di Cagliari.</p>
+        <p>Via Sassari, 51 · 09124 Cagliari (CA)</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="label_hours">Orari</h4>
+        <p><span data-i18n="hours_days">Tutti i giorni</span></p>
+        <p>12:30 – 15:30</p>
+        <p>19:30 – 23:00</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="label_phone">Telefono</h4>
+        <p><a href="tel:+39070653400">+39 070 653400</a></p>
+        <p style="margin-top:10px"><a href="#" onclick="openBook();return false;" data-i18n="nav_book">Prenota</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> Sa Domu Sarda · <span data-i18n="footer_rights">Tutti i diritti riservati.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="close" aria-label="Chiudi">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ============ MODAL PRENOTA ============ -->
+<div class="modal" id="bookModal" onclick="if(event.target===this)closeBook()">
+  <div class="modal-card">
+    <button class="close" aria-label="Chiudi" onclick="closeBook()">×</button>
+    <div class="seal"><img src="assets/img/logo-light.png" alt=""></div>
+    <h3 data-i18n="book_title">Prenota un tavolo</h3>
+    <p class="mtext" data-i18n="book_text">Le prenotazioni si effettuano telefonicamente. Saremo felici di trovarvi il tavolo giusto.</p>
+    <a class="phone" href="tel:+39070653400">+39 070 653400</a>
+    <div class="mhours">
+      <span class="d" data-i18n="book_hours_label">Aperti</span> · <span data-i18n="hours_days">Tutti i giorni</span><br>12:30–15:30 · 19:30–23:00
+    </div>
+    <a class="btn btn-primary" href="tel:+39070653400" style="width:100%" data-i18n="btn_call">Chiama ora</a>
+    <p class="mnote" data-i18n="book_note">Consigliata la prenotazione, soprattutto nel fine settimana.</p>
+  </div>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
