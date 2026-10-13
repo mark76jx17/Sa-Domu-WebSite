@@ -10,3 +10,8 @@ _originali/
 *.zip
 Thumbs.db
 .DS_Store
+
+# Video sorgente (troppo grande per git: il sito usa solo le versioni compresse in assets/video)
+*.mp4
+*.mov
+!assets/video/*.mp4

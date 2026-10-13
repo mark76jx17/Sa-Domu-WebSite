@@ -68,6 +68,7 @@ document.addEventListener('click',e=>{
       case 'close-book':return closeBook();
       case 'close-lightbox':return closeLightbox();
       case 'toggle-slides':return toggleSlides(el);
+      case 'toggle-video':return toggleVideo(el);
     }
   }
   // click sullo sfondo: la lightbox si chiude ovunque, la modale solo fuori dalla scheda
@@ -121,6 +122,44 @@ function toggleSlides(btn){
 }
 document.addEventListener('visibilitychange',syncSlides);
 reduceMotion.addEventListener('change',syncSlides);
+
+/* ===================== Chi siamo: comparsa e video ===================== */
+// gli stili .reveal si attivano solo se questo script è partito: senza JS il contenuto resta visibile
+document.documentElement.classList.add('js');
+const aboutVideo=document.getElementById('aboutVideo');
+const videoBtn=document.querySelector('.film-toggle');
+let videoVisible=false;
+let videoPaused=reduceMotion.matches;   // con "riduci animazioni" il video parte solo su richiesta
+videoBtn.setAttribute('aria-pressed',String(videoPaused));
+
+// il file si scarica solo la prima volta che serve, nella versione adatta allo schermo
+function loadVideo(){
+  if(aboutVideo.getAttribute('src'))return;
+  const saveData=navigator.connection&&navigator.connection.saveData;
+  const hd=matchMedia('(min-width: 900px)').matches&&!saveData;
+  aboutVideo.src=hd?aboutVideo.dataset.srcHd:aboutVideo.dataset.srcSd;
+}
+function syncVideo(){
+  if(videoVisible&&!videoPaused&&!document.hidden){loadVideo();aboutVideo.play().catch(()=>{});}
+  else if(!aboutVideo.paused)aboutVideo.pause();
+}
+function toggleVideo(btn){
+  videoPaused=!videoPaused;
+  btn.setAttribute('aria-pressed',String(videoPaused));
+  syncVideo();
+}
+document.addEventListener('visibilitychange',syncVideo);
+
+if('IntersectionObserver' in window){
+  const revealObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('is-visible');revealObs.unobserve(e.target);}
+  }),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+  // il video gira solo mentre è almeno per metà sullo schermo
+  new IntersectionObserver(([e])=>{videoVisible=e.isIntersecting;syncVideo();},{threshold:.5}).observe(aboutVideo);
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
+}
 
 /* ===================== Year ===================== */
 document.getElementById('year').textContent=new Date().getFullYear();

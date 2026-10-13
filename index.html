@@ -60,12 +60,12 @@
   <div class="hero">
     <!-- Immagini a scorrimento: dissolvenza lenta, si ferma con il pulsante o con "riduci animazioni" del sistema -->
     <div class="hero-bg" aria-hidden="true">
-      <img class="hero-slide is-active" src="assets/img/stufato.jpg" alt="" fetchpriority="high">
-      <img class="hero-slide" src="assets/img/culur.jpg" alt="" loading="lazy" decoding="async">
-      <img class="hero-slide" src="assets/img/taglieri.jpg" alt="" loading="lazy" decoding="async">
-      <img class="hero-slide" src="assets/img/mallo.jpg" alt="" loading="lazy" decoding="async">
-      <img class="hero-slide" src="assets/img/tagliata.jpg" alt="" loading="lazy" decoding="async">
-      <img class="hero-slide" src="assets/img/culup.jpg" alt="" loading="lazy" decoding="async">
+      <img class="hero-slide is-active" src="assets/img/stufato.jpg" srcset="assets/img/stufato-800.jpg 800w, assets/img/stufato.jpg 1500w" sizes="100vw" alt="" fetchpriority="high">
+      <img class="hero-slide" src="assets/img/culur.jpg" srcset="assets/img/culur-800.jpg 800w, assets/img/culur.jpg 1600w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="hero-slide" src="assets/img/taglieri.jpg" srcset="assets/img/taglieri-800.jpg 800w, assets/img/taglieri.jpg 1700w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="hero-slide" src="assets/img/mallo.jpg" srcset="assets/img/mallo-800.jpg 800w, assets/img/mallo.jpg 1600w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="hero-slide" src="assets/img/tagliata.jpg" srcset="assets/img/tagliata-800.jpg 800w, assets/img/tagliata.jpg 1600w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="hero-slide" src="assets/img/culup.jpg" srcset="assets/img/culup-800.jpg 800w, assets/img/culup.jpg 1600w" sizes="100vw" alt="" loading="lazy" decoding="async">
     </div>
     <button type="button" class="hero-pause" aria-pressed="false" data-action="toggle-slides">
       <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
@@ -125,14 +125,14 @@
         <div class="ornament"><span>✦</span></div>
       </div>
       <div class="gallery-grid">
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/stufato.jpg"><img src="assets/img/stufato.jpg" alt="Stufato di carne" loading="lazy"><span class="cap" aria-hidden="true">Stufato di carne</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/tagliata.jpg"><img src="assets/img/tagliata.jpg" alt="Tagliata di manzo" loading="lazy"><span class="cap" aria-hidden="true">Tagliata di manzo</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/taglieri.jpg"><img src="assets/img/taglieri.jpg" alt="Tagliere di formaggi sardi" loading="lazy"><span class="cap" aria-hidden="true">Tagliere di formaggi sardi</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/ravioli.jpg"><img src="assets/img/ravioli.jpg" alt="Ravioli al sugo" loading="lazy"><span class="cap" aria-hidden="true">Ravioli al sugo</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culur.jpg"><img src="assets/img/culur.jpg" alt="Culurgiones tradizionali" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones tradizionali</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culun.jpg"><img src="assets/img/culun.jpg" alt="Culurgiones noci e pinoli" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones noci e pinoli</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culup.jpg"><img src="assets/img/culup.jpg" alt="Culurgiones crema di porri" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones crema di porri</span></button></figure>
-        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/mallo.jpg"><img src="assets/img/mallo.jpg" alt="Malloreddus alla campidanese" loading="lazy"><span class="cap" aria-hidden="true">Malloreddus alla campidanese</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/stufato.jpg"><img src="assets/img/stufato.jpg" srcset="assets/img/stufato-800.jpg 800w, assets/img/stufato.jpg 1500w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Stufato di carne" loading="lazy"><span class="cap" aria-hidden="true">Stufato di carne</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/tagliata.jpg"><img src="assets/img/tagliata.jpg" srcset="assets/img/tagliata-800.jpg 800w, assets/img/tagliata.jpg 1600w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Tagliata di manzo" loading="lazy"><span class="cap" aria-hidden="true">Tagliata di manzo</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/taglieri.jpg"><img src="assets/img/taglieri.jpg" srcset="assets/img/taglieri-800.jpg 800w, assets/img/taglieri.jpg 1700w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Tagliere di formaggi sardi" loading="lazy"><span class="cap" aria-hidden="true">Tagliere di formaggi sardi</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/ravioli.jpg"><img src="assets/img/ravioli.jpg" srcset="assets/img/ravioli-800.jpg 800w, assets/img/ravioli.jpg 1539w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Ravioli al sugo" loading="lazy"><span class="cap" aria-hidden="true">Ravioli al sugo</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culur.jpg"><img src="assets/img/culur.jpg" srcset="assets/img/culur-800.jpg 800w, assets/img/culur.jpg 1600w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Culurgiones tradizionali" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones tradizionali</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culun.jpg"><img src="assets/img/culun.jpg" srcset="assets/img/culun-800.jpg 800w, assets/img/culun.jpg 1536w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Culurgiones noci e pinoli" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones noci e pinoli</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/culup.jpg"><img src="assets/img/culup.jpg" srcset="assets/img/culup-800.jpg 800w, assets/img/culup.jpg 1600w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Culurgiones crema di porri" loading="lazy"><span class="cap" aria-hidden="true">Culurgiones crema di porri</span></button></figure>
+        <figure><button type="button" class="gallery-item" data-lightbox="assets/img/mallo.jpg"><img src="assets/img/mallo.jpg" srcset="assets/img/mallo-800.jpg 800w, assets/img/mallo.jpg 1600w" sizes="(max-width: 420px) 100vw, (max-width: 760px) 50vw, 280px" alt="Malloreddus alla campidanese" loading="lazy"><span class="cap" aria-hidden="true">Malloreddus alla campidanese</span></button></figure>
       </div>
       <p class="gallery-hint" data-i18n="gallery_hint">Tocca un'immagine per ingrandirla</p>
     </div>
@@ -217,22 +217,35 @@
 <section id="about" class="tab">
   <div class="section-pad alt">
     <div class="wrap">
+      <!-- Video delle sale: parte da solo (muto) solo quando è visibile; la versione 720p o 1080p è scelta in base allo schermo -->
+      <figure class="about-film reveal">
+        <video id="aboutVideo" muted loop playsinline preload="none" poster="assets/video/sala-poster.jpg"
+          data-src-sd="assets/video/sala-720.mp4" data-src-hd="assets/video/sala-1080.mp4"
+          aria-label="Video delle sale di Sa Domu Sarda"></video>
+        <figcaption class="film-cap"><span class="kicker" data-i18n="video_caption">Le nostre sale</span></figcaption>
+        <button type="button" class="film-toggle" aria-pressed="false" data-action="toggle-video">
+          <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 001.5.86l10.5-6.5a1 1 0 000-1.72L9.5 4.64A1 1 0 008 5.5z"/></svg>
+          <span class="sr-only" data-i18n="video_toggle">Pausa o riproduci il video</span>
+        </button>
+      </figure>
+
       <div class="about-wrap">
-        <div class="about-text">
+        <div class="about-text reveal">
           <p class="kicker" data-i18n="nav_about">Chi siamo</p>
           <h2 data-i18n="about_title">Sa Domu Sarda</h2>
           <p class="about-sub" data-i18n="about_sub">Le radici della nostra terra, il sapore della tradizione.</p>
           <div class="ornament ornament-left"><span>✦</span></div>
           <p data-i18n="about_p1" data-i18n-rich>Ci sono luoghi in cui la tradizione non è soltanto un ricordo, ma qualcosa che si vive ogni giorno. <em>Sa Domu Sarda nasce proprio da questo legame profondo con la Sardegna</em>: varcando la soglia si viene accolti dalle volte in pietra, dal calore dei tavoli in legno e da oggetti che raccontano la storia della nostra isola, in un ambiente in cui riscoprire il piacere di stare a tavola.</p>
           <p data-i18n="about_p2" data-i18n-rich>La nostra cucina celebra i sapori della <em>tradizione sarda di terra</em>. Tra le specialità spiccano i culurgiones, simbolo di una sapienza antica: nella versione tradizionale, con noci e pinoli oppure con una delicata crema di porri, uniscono il rispetto per le ricette di sempre a un tocco di originalità.</p>
-          <div class="about-close">
+          <div class="about-close reveal">
             <p data-i18n="about_c1">Sa Domu Sarda è un omaggio alla nostra terra, alla sua storia e alla sua ospitalità.</p>
             <p data-i18n="about_c2">Un luogo in cui la tradizione prende vita, ogni piatto racconta una storia.</p>
             <p data-i18n="about_c3">Benvenuti a Sa Domu Sarda. La Sardegna, da assaporare.</p>
           </div>
         </div>
-        <div class="about-media">
-          <div class="frame"><img src="assets/img/taglieri.jpg" alt="Tagliere di formaggi e salumi sardi" loading="lazy"></div>
+        <div class="about-media reveal reveal-late">
+          <div class="frame"><img src="assets/img/taglieri.jpg" srcset="assets/img/taglieri-800.jpg 800w, assets/img/taglieri.jpg 1700w" sizes="(max-width: 960px) 100vw, 480px" alt="Tagliere di formaggi e salumi sardi" loading="lazy"></div>
           <div class="about-seal"><img src="assets/img/logo-light.png" alt=""></div>
         </div>
       </div>

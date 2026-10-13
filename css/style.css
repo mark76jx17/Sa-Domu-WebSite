@@ -221,6 +221,25 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 .michelin-quote cite{display:block;margin-top:12px;font-style:normal;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta)}
 
 /* ===================== About ===================== */
+.about-film{position:relative;margin:0 0 56px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--espresso);aspect-ratio:16/9}
+.about-film video{display:block;width:100%;height:100%;object-fit:cover}
+.about-film::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;pointer-events:none;background:linear-gradient(transparent,rgba(20,16,12,.55))}
+.film-cap{position:absolute;left:22px;bottom:16px;z-index:2;margin:0}
+.film-cap .kicker{color:#f0d9a0;margin:0;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.film-toggle{position:absolute;right:16px;bottom:14px;z-index:2;width:34px;height:34px;padding:0;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;
+  background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.35);opacity:.7;transition:opacity .2s ease}
+.film-toggle:hover,.film-toggle:focus-visible{opacity:1}
+.film-toggle svg{width:13px;height:13px}
+.film-toggle .i-play,.film-toggle[aria-pressed="true"] .i-pause{display:none}
+.film-toggle[aria-pressed="true"] .i-play{display:block}
+
+/* comparsa graduale allo scorrimento: solo opacità e piccolo spostamento, una volta sola */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.reveal-late{transition-delay:.15s}
+.js .reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+
 .about-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
 .about-text p{color:var(--ink-soft);font-size:1.05rem}
 .about-text p+p{margin-top:1.1rem}
@@ -327,11 +346,11 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 }
 @media(max-width:560px){
   .hero-content{padding:78px 18px}
-  .hero .kicker{letter-spacing:.13em;font-size:.66rem}
+  .hero .kicker{letter-spacing:.13em;font-size:.75rem}
   .hero-title{font-size:2.3rem;letter-spacing:.02em}
   .hero-sub{font-size:1.1rem}
   .hero-badges{margin-top:1.8rem;flex-direction:column;align-items:center;gap:8px}
-  .badge{font-size:.66rem;padding:.45em .9em}
+  .badge{font-size:.75rem;padding:.45em .9em}
   .hero-cta .btn{padding:.8em 1.2em}
 }
 @media(max-width:420px){
@@ -339,4 +358,21 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
   .gallery-grid{grid-template-columns:1fr}
   .brand-word{font-size:1rem}
   .hero-title{font-size:2rem}
+}
+
+/* ===================== Mobile: aree di tocco e leggibilità ===================== */
+/* schermi touch: ogni elemento cliccabile alto almeno ~44px (dimensione comoda per un dito) */
+@media(pointer:coarse){
+  .hero-pause,.film-toggle{width:44px;height:44px}
+  .hero-pause svg,.film-toggle svg{width:15px;height:15px}
+  a.badge{min-height:40px}
+  .info-row a.val,.footer-col a,.link-btn{display:inline-block;padding:11px 0;margin:-11px 0}
+  .michelin-quote cite a{display:inline-block;padding:12px 8px}
+}
+@media(max-width:900px){
+  .lang-btn{min-width:44px;min-height:44px;font-size:.8rem}
+}
+/* testi piccoli in maiuscolo: mai sotto i 12px su telefono */
+@media(max-width:760px){
+  .kicker,.info-row .lbl,.review .platform,.footer-col h4{font-size:.75rem}
 }
