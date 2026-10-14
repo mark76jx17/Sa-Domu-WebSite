@@ -161,6 +161,14 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
 }
 
+/* ===================== Avvisi a scadenza ===================== */
+// gli elementi con data-until="AAAA-MM-GG" spariscono da quel giorno in poi (es. chiusura stagionale terminata)
+(function(){
+  const n=new Date(),pad=x=>String(x).padStart(2,'0');
+  const today=n.getFullYear()+'-'+pad(n.getMonth()+1)+'-'+pad(n.getDate());
+  document.querySelectorAll('[data-until]').forEach(el=>{if(today>=el.dataset.until)el.remove();});
+})();
+
 /* ===================== Year ===================== */
 document.getElementById('year').textContent=new Date().getFullYear();
 
@@ -182,6 +190,13 @@ function setLang(lang){
     if(!Object.prototype.hasOwnProperty.call(d,k))return;
     if(el.hasAttribute('data-i18n-rich'))renderRich(el,d[k]);
     else el.textContent=d[k];
+  });
+  // email di prenotazione: oggetto e traccia nella lingua scelta (encodeURIComponent evita caratteri che romperebbero il link)
+  // ogni sede ha la sua casella: l'oggetto riporta il nome della sede (es. "Prenotazione tavolo - Pula")
+  document.querySelectorAll('a[data-mail-booking]').forEach(a=>{
+    const addr=a.getAttribute('href').split(/[:?]/)[1];
+    const subject=d.book_mail_subject+' - '+a.dataset.city;
+    a.href='mailto:'+addr+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(d.book_mail_body);
   });
   document.documentElement.lang=lang;
   document.querySelectorAll('.lang-btn').forEach(b=>{

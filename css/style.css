@@ -137,6 +137,8 @@ h3{font-size:1.5rem}
   background:linear-gradient(180deg,rgba(38,32,26,.42) 0%,rgba(38,32,26,.5) 45%,rgba(38,32,26,.82) 100%)}
 .hero-content{position:relative;z-index:2;color:#fff;padding:90px 22px;max-width:760px}
 .hero .kicker{color:#f0d9a0}
+/* logo al posto della scritta: solo le linee, bianche e leggermente trasparenti; l'ombra lo stacca dalle foto chiare */
+.hero-logo{display:block;width:auto;height:96px;margin:0 auto 12px;opacity:.88;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
 .hero-title{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(2.6rem,8vw,5rem);letter-spacing:.06em;line-height:1.04;margin:.1em 0 .25em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.15rem,2.6vw,1.6rem);color:#f5ecdc;max-width:38ch;margin:0 auto 1.6rem}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -271,6 +273,13 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 .info-row a.val:hover{color:var(--terracotta)}
 .features{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .feature{display:inline-flex;align-items:center;gap:.4em;font-size:.8rem;color:var(--ink-soft);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:.35em .8em}
+/* chiusura stagionale Pula */
+.season-note{display:block;margin-top:8px;font-size:.86rem;font-weight:500;line-height:1.4;color:var(--terracotta)}
+.season-banner{margin:14px 0 2px;padding:.65em .9em;border-radius:10px;font-size:.9rem;font-weight:500;line-height:1.45;
+  color:var(--terracotta-d);background:rgba(168,71,42,.07);border:1px solid rgba(168,71,42,.25)}
+.season-banner::first-letter{text-transform:uppercase}
+.site-footer .season-note{color:#e0b77a;font-size:.84rem}
+.mhours .season-note{font-size:.82rem}
 .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .map-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);min-height:360px}
 .map-card iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:saturate(.9) contrast(1.02)}
@@ -285,6 +294,8 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 .footer-col h4{font-family:'Inter',sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#b89a6a;margin:0 0 12px}
 .footer-col a{color:#e9ddc9}
 .footer-col a:hover{color:#fff}
+.footer-col .footer-sub{margin-top:18px}
+.footer-col a[href^="mailto:"],.info-row .val-mail{overflow-wrap:break-word}
 .site-footer .city{display:inline-block;min-width:4.6em;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#b89a6a}
 .site-footer .footer-book{margin-top:10px}
 .link-btn{background:none;border:none;padding:0;font:inherit;color:#e9ddc9;cursor:pointer}
@@ -298,9 +309,9 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 .lightbox .close{position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1}
 
 /* ===================== Modal (Prenota) ===================== */
-.modal{position:fixed;inset:0;z-index:110;background:rgba(20,16,12,.62);display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(3px)}
+.modal{position:fixed;inset:0;z-index:110;background:rgba(20,16,12,.62);display:none;align-items:flex-start;overflow-y:auto;overscroll-behavior:contain;justify-content:center;padding:22px;backdrop-filter:blur(3px)}
 .modal.open{display:flex;animation:fade .25s ease}
-.modal-card{background:var(--cream);border-radius:22px;max-width:430px;width:100%;padding:38px 34px;text-align:center;box-shadow:0 40px 90px rgba(0,0,0,.4);position:relative;border:1px solid var(--line)}
+.modal-card{margin:auto;background:var(--cream);border-radius:22px;max-width:430px;width:100%;padding:38px 34px;text-align:center;box-shadow:0 40px 90px rgba(0,0,0,.4);position:relative;border:1px solid var(--line)}
 .modal-card .seal{width:74px;height:74px;border-radius:50%;background:var(--espresso);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .modal-card .seal img{width:33px}
 .modal-card h3{font-size:1.9rem;margin-bottom:.3rem}
@@ -311,6 +322,10 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 .modal-card .phone{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);display:block;line-height:1.2}
 .modal-card .phone .city{display:block;font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:2px}
 .mcalls{display:grid;gap:10px}
+.mmail{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:8px}
+.mmail .d{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta)}
+.mail-btn{width:100%;overflow-wrap:anywhere;font-weight:500}
+.mail-btn svg{width:18px;height:18px;flex-shrink:0}
 .modal-card .mnote{font-size:.8rem;color:var(--ink-soft);margin-top:16px}
 .modal-card .close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.7rem;color:var(--ink-soft);cursor:pointer;line-height:1}
 
@@ -347,6 +362,7 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 @media(max-width:560px){
   .hero-content{padding:78px 18px}
   .hero .kicker{letter-spacing:.13em;font-size:.75rem}
+  .hero-logo{height:76px;margin-bottom:10px}
   .hero-title{font-size:2.3rem;letter-spacing:.02em}
   .hero-sub{font-size:1.1rem}
   .hero-badges{margin-top:1.8rem;flex-direction:column;align-items:center;gap:8px}
@@ -375,4 +391,18 @@ a.award:hover,a.review:hover{border-color:var(--terracotta);transform:translateY
 /* testi piccoli in maiuscolo: mai sotto i 12px su telefono */
 @media(max-width:760px){
   .kicker,.info-row .lbl,.review .platform,.footer-col h4{font-size:.75rem}
+}
+
+/* finestra Prenota compatta sui telefoni piccoli */
+@media(max-width:420px){
+  .modal{padding:12px}
+  .modal-card{padding:26px 18px}
+  .modal-card h3{font-size:1.6rem}
+  .modal-card .mtext{font-size:.92rem;margin-bottom:12px}
+  .modal-card .seal{width:60px;height:60px;margin-bottom:10px}
+  .modal-card .seal img{width:27px}
+  .mphones{margin-bottom:12px}
+  .modal-card .phone{font-size:1.2rem}
+  .modal-card .mhours{margin-bottom:12px}
+  .mail-btn{padding:.8em 1em;font-size:.86rem}
 }

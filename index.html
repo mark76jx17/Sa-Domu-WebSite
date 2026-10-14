@@ -73,7 +73,8 @@
       <span class="sr-only" data-i18n="slides_pause">Ferma lo scorrimento delle immagini</span>
     </button>
     <div class="hero-content">
-      <p class="kicker" data-i18n="hero_kicker">Trattoria · Cucina sarda di terra</p>
+      <img class="hero-logo" src="assets/img/logo-light.png" alt="" width="155" height="238">
+      <p class="kicker" data-i18n="hero_kicker">Cucina tradizionale sarda</p>
       <h1 class="hero-title">Sa Domu Sarda</h1>
       <p class="hero-sub" data-i18n="hero_sub">Tradizione, passione e sapori di Sardegna: una cucina da scoprire, un'esperienza da vivere.</p>
       <div class="hero-cta">
@@ -276,6 +277,10 @@
               <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
               <div><div class="lbl" data-i18n="label_phone">Telefono</div><a class="val" href="tel:+39070653400">+39 070 653400</a></div>
             </div>
+            <div class="info-row">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
+              <div><div class="lbl" data-i18n="label_email">Email</div><a class="val val-mail" href="mailto:infosadomusarda@gmail.com">infosadomusarda<wbr>@gmail.com</a></div>
+            </div>
             <div class="contact-actions">
               <a class="btn btn-primary" href="tel:+39070653400"><span data-i18n="btn_call">Chiama ora</span> · Cagliari</a>
               <a class="btn btn-ghost" href="https://maps.app.goo.gl/qagX7BM5ixHfqhiZA" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_directions">Come raggiungerci</span> · Cagliari</a>
@@ -291,6 +296,7 @@
         <article class="sede" aria-labelledby="sede-pula">
           <div class="info-card">
             <h3 class="sede-name" id="sede-pula">Pula</h3>
+            <p class="season-banner" data-until="2027-04-01"><span data-i18n="pula_season">chiusura stagionale dal 2 novembre 2026, riapre il 1° aprile 2027</span></p>
             <div class="info-row">
               <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
               <div><div class="lbl" data-i18n="label_address">Indirizzo</div><div class="val">Via Corinaldi, 23<br>09050 Pula (CA)</div></div>
@@ -298,6 +304,10 @@
             <div class="info-row">
               <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
               <div><div class="lbl" data-i18n="label_phone">Telefono</div><a class="val" href="tel:+390707537197">+39 070 7537197</a></div>
+            </div>
+            <div class="info-row">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
+              <div><div class="lbl" data-i18n="label_email">Email</div><a class="val val-mail" href="mailto:sadomusardapula@gmail.com">sadomusardapula<wbr>@gmail.com</a></div>
             </div>
             <div class="contact-actions">
               <a class="btn btn-primary" href="tel:+390707537197"><span data-i18n="btn_call">Chiama ora</span> · Pula</a>
@@ -316,7 +326,7 @@
       <div class="info-card info-common">
         <div class="info-row">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div><div class="lbl" data-i18n="label_hours">Orari</div><div class="val"><span data-i18n="hours_days">Tutti i giorni</span><br>12:30–15:30 · 19:30–23:00</div></div>
+          <div><div class="lbl" data-i18n="label_hours">Orari</div><div class="val"><span data-i18n="hours_days">Tutti i giorni</span><br>12:30–15:30 · 19:30–23:00<span class="season-note" data-until="2027-04-01"><b>Pula</b> · <span data-i18n="pula_season">chiusura stagionale dal 2 novembre 2026, riapre il 1° aprile 2027</span></span></div></div>
         </div>
         <div class="info-row">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7L9 18l-5-5"/></svg>
@@ -354,11 +364,15 @@
         <p><span data-i18n="hours_days">Tutti i giorni</span></p>
         <p>12:30 – 15:30</p>
         <p>19:30 – 23:00</p>
+        <p><span class="season-note" data-until="2027-04-01"><b>Pula</b> · <span data-i18n="pula_season">chiusura stagionale dal 2 novembre 2026, riapre il 1° aprile 2027</span></span></p>
       </div>
       <div class="footer-col">
         <h4 data-i18n="label_phone">Telefono</h4>
         <p><span class="city">Cagliari</span> <a href="tel:+39070653400">+39 070 653400</a></p>
         <p><span class="city">Pula</span> <a href="tel:+390707537197">+39 070 7537197</a></p>
+        <h4 class="footer-sub" data-i18n="label_email">Email</h4>
+        <p><span class="city">Cagliari</span> <a href="mailto:infosadomusarda@gmail.com">infosadomusarda<wbr>@gmail.com</a></p>
+        <p><span class="city">Pula</span> <a href="mailto:sadomusardapula@gmail.com">sadomusardapula<wbr>@gmail.com</a></p>
         <p class="footer-book"><button type="button" class="link-btn" data-action="book" data-i18n="nav_book">Prenota</button></p>
       </div>
     </div>
@@ -387,10 +401,16 @@
     </div>
     <div class="mhours">
       <span class="d" data-i18n="book_hours_label">Aperti</span> · <span data-i18n="hours_days">Tutti i giorni</span><br>12:30–15:30 · 19:30–23:00
+      <span class="season-note" data-until="2027-04-01"><b>Pula</b> · <span data-i18n="pula_season">chiusura stagionale dal 2 novembre 2026, riapre il 1° aprile 2027</span></span>
     </div>
     <div class="mcalls">
       <a class="btn btn-primary" href="tel:+39070653400"><span data-i18n="btn_call">Chiama ora</span> · Cagliari</a>
       <a class="btn btn-primary" href="tel:+390707537197"><span data-i18n="btn_call">Chiama ora</span> · Pula</a>
+    </div>
+    <div class="mmail">
+      <span class="d" data-i18n="book_or_email">Oppure via email</span>
+      <a class="btn btn-ghost mail-btn" data-mail-booking data-city="Cagliari" href="mailto:infosadomusarda@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><span><span data-i18n="btn_email">Scrivi una email</span> · Cagliari</span></a>
+      <a class="btn btn-ghost mail-btn" data-mail-booking data-city="Pula" href="mailto:sadomusardapula@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg><span><span data-i18n="btn_email">Scrivi una email</span> · Pula</span></a>
     </div>
     <p class="mnote" data-i18n="book_note">Consigliata la prenotazione, soprattutto nel fine settimana.</p>
   </div>
