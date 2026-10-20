@@ -3,13 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Sicurezza: GitHub Pages non permette header HTTP personalizzati, quindi la policy è dichiarata qui.
+<!-- Sicurezza: la stessa policy è inviata anche come header dal server (.htaccess); qui resta come seconda protezione.
      Nessuno script/stile inline: tutto il comportamento è in js/main.js, tutto lo stile in css/style.css. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://static.tacdn.com; frame-src https://www.openstreetmap.org; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Sa Domu Sarda · Ristorante tipico sardo a Cagliari</title>
 <meta name="description" content="Sa Domu Sarda — cucina sarda di terra nel cuore di Cagliari. Culurgiones fatti a mano, taglieri, carni e dolci della tradizione. Selezione Michelin · Travellers' Choice.">
 <link rel="icon" type="image/png" href="assets/img/logo-dark.png">
+<link rel="canonical" href="https://ristorantesadomusarda.it/">
+<!-- Anteprima quando il link viene condiviso (WhatsApp, Facebook, ...) -->
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Sa Domu Sarda">
+<meta property="og:title" content="Sa Domu Sarda · Ristorante tipico sardo a Cagliari e Pula">
+<meta property="og:description" content="Cucina tradizionale sarda: culurgiones fatti a mano, taglieri, carni e dolci della tradizione. Selezione Michelin · Travellers' Choice.">
+<meta property="og:url" content="https://ristorantesadomusarda.it/">
+<meta property="og:image" content="https://ristorantesadomusarda.it/assets/video/sala-poster.jpg">
+<meta property="og:locale" content="it_IT">
+<!-- Dati strutturati per Google (non è codice eseguito: la CSP non lo blocca) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Restaurant",
+   "@id": "https://ristorantesadomusarda.it/#cagliari",
+   "name": "Sa Domu Sarda · Cagliari",
+   "url": "https://ristorantesadomusarda.it/",
+   "image": "https://ristorantesadomusarda.it/assets/video/sala-poster.jpg",
+   "logo": "https://ristorantesadomusarda.it/assets/img/logo-dark.png",
+   "servesCuisine": [
+    "Sarda",
+    "Italiana"
+   ],
+   "priceRange": "€€",
+   "telephone": "+39070653400",
+   "email": "infosadomusarda@gmail.com",
+   "acceptsReservations": true,
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Sassari, 51",
+    "postalCode": "09124",
+    "addressLocality": "Cagliari",
+    "addressRegion": "CA",
+    "addressCountry": "IT"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.2169583,
+    "longitude": 9.1106194
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "12:30",
+     "closes": "15:30"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "19:30",
+     "closes": "23:00"
+    }
+   ],
+   "sameAs": [
+    "https://guide.michelin.com/it/it/sardegna/cagliari/ristorante/sa-domu-sarda",
+    "https://www.tripadvisor.it/Restaurant_Review-g187879-d1607144-Reviews-Sa_Domu_Sarda-Sardinia.html",
+    "https://restaurantguru.it/Sa-Domu-Sarda-Cagliari"
+   ]
+  },
+  {
+   "@type": "Restaurant",
+   "@id": "https://ristorantesadomusarda.it/#pula",
+   "name": "Sa Domu Sarda · Pula",
+   "url": "https://ristorantesadomusarda.it/",
+   "image": "https://ristorantesadomusarda.it/assets/video/sala-poster.jpg",
+   "logo": "https://ristorantesadomusarda.it/assets/img/logo-dark.png",
+   "servesCuisine": [
+    "Sarda",
+    "Italiana"
+   ],
+   "priceRange": "€€",
+   "telephone": "+390707537197",
+   "email": "sadomusardapula@gmail.com",
+   "acceptsReservations": true,
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Corinaldi, 23",
+    "postalCode": "09050",
+    "addressLocality": "Pula",
+    "addressRegion": "CA",
+    "addressCountry": "IT"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.0076201,
+    "longitude": 9.0025547
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "12:30",
+     "closes": "15:30"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "19:30",
+     "closes": "23:00"
+    }
+   ],
+   "specialOpeningHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "opens": "00:00",
+     "closes": "00:00",
+     "validFrom": "2026-11-02",
+     "validThrough": "2027-03-31"
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

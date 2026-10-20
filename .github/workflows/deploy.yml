@@ -1,4 +1,4 @@
-name: Deploy sito su GitHub Pages
+name: GitHub Pages - rimando al nuovo dominio
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'github-pages'
 
       - name: Deploy to GitHub Pages
         id: deployment
